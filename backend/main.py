@@ -17,7 +17,7 @@ oauth2_scheme =OAuth2PasswordBearer(tokenUrl = "token")
 #list of origins or websites that can talk to you backend
 origins =     [
 
-    "http://locahost:3000",
+    "http://localhost:3000",
     "http://yourfrontenddomain", 
 
 ]
@@ -60,7 +60,7 @@ def get_user_by_username(db:Session, username:str):
 
 #function to create new user in the database
 def create_user(db:Session, user: UserCreate):
-    hashed_password = pwd_context.hash(user.passwaord)
+    hashed_password = pwd_context.hash(user.password)
     db_user = User(username=user.username, hashed_password = hashed_password)
     db.add(db_user)
     db.commit()
