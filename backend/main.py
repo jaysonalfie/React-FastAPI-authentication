@@ -45,7 +45,7 @@ pwd_context = CryptContext(schemes=["bcrypt"] ,deprecated="auto" )
 
 #Your JWT secret and algorithm
 SECRET_KEY = "fc2847411328aaac63a1378358086caccff1f423ee3be1cca7b43800e5a39c16"
-ALGORITHM = "HS526"
+ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES= 30
 
 #creating pydantic models for data validation
