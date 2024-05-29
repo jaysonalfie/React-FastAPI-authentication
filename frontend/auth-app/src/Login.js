@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -77,6 +77,8 @@ const Login = () => {
         </button>
         {error && <p style={{ color: "red" }}>{error}</p>}
       </form>
+      <p>
+        Don't have an account ? <Link to='/signup'>Signup</Link>      </p>
     </div>
   );
 };
