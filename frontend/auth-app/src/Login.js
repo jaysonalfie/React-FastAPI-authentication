@@ -44,7 +44,7 @@ const Login = () => {
         navigate("/protected");
       } else {
         const errorData = await response.json();
-        setError(errorData.detail || "Authenticated failed!");
+        setError(errorData.detail || "Authentication failed!");
       }
     } catch (error) {
       setLoading(false);
